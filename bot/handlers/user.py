@@ -1221,7 +1221,7 @@ async def cb_request_recharge(callback: CallbackQuery, session: AsyncSession, bo
 
     text = (
         "👑 <b>Buy Credits or Unlimited Plans</b>\n\n"
-        "To purchase, please contact the owner @tgekaiva.\n\n"
+        "To purchase, please contact the owner @Heb47.\n\n"
         "Select the package you want to buy below to send a purchase request to the admin:"
     )
     await callback.message.answer(text, reply_markup=get_payment_packages_keyboard(plans), parse_mode="HTML")
@@ -1321,18 +1321,18 @@ async def cb_buy_plan(callback: CallbackQuery, session: AsyncSession, bot: Bot):
     pkg_name = f"{plan.name} (₹{plan.price})"
 
     if is_updated:
-        await callback.answer("🔄 Request updated! Please contact @tgekaiva to pay.")
+        await callback.answer("🔄 Request updated! Please contact @Heb47 to pay.")
         await callback.message.edit_text(
             f"🔄 <b>Purchase Request Updated!</b>\n\nYou updated your selection to: <b>{pkg_name}</b>\n\n"
-            "👉 <b>Please message @tgekaiva to complete your payment.</b>\n"
+            "👉 <b>Please message @Heb47 to complete your payment.</b>\n"
             "Once payment is confirmed, your account will be upgraded instantly!",
             parse_mode="HTML"
         )
     else:
-        await callback.answer("✅ Request sent! Please contact @tgekaiva to pay.")
+        await callback.answer("✅ Request sent! Please contact @Heb47 to pay.")
         await callback.message.edit_text(
             f"✅ <b>Purchase Request Sent!</b>\n\nYou selected: <b>{pkg_name}</b>\n\n"
-            "👉 <b>Please message @tgekaiva to complete your payment.</b>\n"
+            "👉 <b>Please message @Heb47 to complete your payment.</b>\n"
             "Once payment is confirmed, your account will be upgraded instantly!",
             parse_mode="HTML"
         )
@@ -1362,18 +1362,18 @@ async def cb_buy_package(callback: CallbackQuery, session: AsyncSession, bot: Bo
     is_updated = getattr(req, "is_updated", False)
 
     if is_updated:
-        await callback.answer("🔄 Request updated! Please contact @tgekaiva to pay.")
+        await callback.answer("🔄 Request updated! Please contact @Heb47 to pay.")
         await callback.message.edit_text(
             f"🔄 <b>Purchase Request Updated!</b>\n\nYou updated your selection to: <b>{pkg_name}</b>\n\n"
-            "👉 <b>Please message @tgekaiva to complete your payment.</b>\n"
+            "👉 <b>Please message @Heb47 to complete your payment.</b>\n"
             "Once payment is confirmed, your account will be upgraded instantly!",
             parse_mode="HTML"
         )
     else:
-        await callback.answer("✅ Request sent! Please contact @tgekaiva to pay.")
+        await callback.answer("✅ Request sent! Please contact @Heb47 to pay.")
         await callback.message.edit_text(
             f"✅ <b>Purchase Request Sent!</b>\n\nYou selected: <b>{pkg_name}</b>\n\n"
-            "👉 <b>Please message @tgekaiva to complete your payment.</b>\n"
+            "👉 <b>Please message @Heb47 to complete your payment.</b>\n"
             "Once payment is confirmed, your account will be upgraded instantly!",
             parse_mode="HTML"
         )
