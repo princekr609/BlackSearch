@@ -1198,7 +1198,7 @@ async def cmd_recharge(message: Message, session: AsyncSession, bot: Bot):
     
     text = (
         "👑 <b>Buy Credits or Unlimited Plans</b>\n\n"
-        "To purchase, please contact the owner @tgekaiva.\n\n"
+        "To purchase, please contact the owner @Heb47.\n\n"
         "Select the package you want to buy below to send a purchase request to the admin:"
     )
     await message.answer(text, reply_markup=get_payment_packages_keyboard(plans), parse_mode="HTML")
